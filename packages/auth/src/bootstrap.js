@@ -11,7 +11,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   if (onNavigate) {
     history.listen(onNavigate);
   }
-    render(<App history={history} />, el);
+  render(<App history={history} />, el);
 
   return {
     onParentNavigate({ pathname: nextPathname }) {
@@ -23,7 +23,7 @@ const mount = (el, { onNavigate, defaultHistory, initialPath }) => {
   }
 }
 if (process.env.NODE_ENV === 'development') {
-  const element = document.querySelector('#_marketing-dev-root');
+  const element = document.querySelector('#_auth-dev-root');
 
   if (element) {
     mount(element, { defaultHistory: createBrowserHistory() })
